@@ -41,36 +41,40 @@ export default function Items() {
     localStorage.setItem("favs", JSON.stringify(updated));
   };
 
-  if (loading) return <p style={{ textAlign: "center" }}>⏳ Cargando pokémones...</p>;
-
-  return (
-    <div style={{ padding: "1rem" }}>
-      <h1>🔍 Lista de Pokémon</h1>
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
-        gap: "1rem"
-      }}>
-        {pokemons.map((poke) => {
-          const isFav = favorites.includes(poke.name);
-          return (
-            <div key={poke.name} style={{
-              border: "1px solid #ccc",
-              borderRadius: "8px",
-              padding: "1rem",
-              textAlign: "center"
-            }}>
-              <img src={poke.image} alt={poke.name} width={100} />
-              <h3 style={{ textTransform: "capitalize" }}>{poke.name}</h3>
-              <p>Altura: {poke.height}</p>
-              <p>Peso: {poke.weight}</p>
-              <button onClick={() => toggleFav(poke.name)}>
-                {isFav ? " Quitar" : " Favorito"}
-              </button>
-            </div>
-          );
-        })}
-      </div>
+  if (loading) return (
+  <div className="d-flex justify-content-center mt-5">
+    <div className="spinner-border text-danger" role="status">
+      <span className="visually-hidden">Cargando...</span>
     </div>
-  );
+  </div>
+);
+
+return (
+  <div className="container mt-4">
+    <h1 className="mb-4 text-center text-danger">🔍 Lista de Pokémon</h1>
+    <div className="row">
+      {pokemons.map((poke) => {
+        const isFav = favorites.includes(poke.name);
+        return (
+          <div key={poke.name} className="col-md-3 col-sm-6 mb-4">
+            <div className="card shadow-sm text-center p-3">
+              <img src={poke.image} className="card-img-top mx-auto" style={{ width: "100px" }} />
+              <div className="card-body">
+                <h5 className="card-title text-capitalize">{poke.name}</h5>
+                <p className="card-text">Altura: {poke.height}</p>
+                <p className="card-text">Peso: {poke.weight}</p>
+                <button
+                  onClick={() => toggleFav(poke.name)}
+                  className={`btn ${isFav ? "btn-outline-danger" : "btn-danger"}`}
+                >
+                  {isFav ? " Quitar" : " Favorito"}
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+);
 }
