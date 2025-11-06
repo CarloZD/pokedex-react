@@ -1,16 +1,54 @@
-# React + Vite
+# PokeDex React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación desarrollada en React que permite explorar y visualizar información de distintos Pokémon consumidos desde la API pública [PokeAPI](https://pokeapi.co/).
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El proyecto muestra una interfaz sencilla con tres rutas principales:
 
-## React Compiler
+* **Inicio (Home):** Presenta el nombre del proyecto, una breve descripción y una vista previa de algunos Pokémon.
+* **Pokémon (Items):** Muestra un listado completo de Pokémon obtenidos desde la PokeAPI, con sus principales propiedades (nombre, tipo e imagen).
+* **Contacto:** Página informativa o de presentación.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+* React 19
+* Vite
+* React Router DOM
+* Axios
+* Bootstrap 5
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Instalación y ejecución
+
+1. Clonar este repositorio:
+
+   ```bash
+   git clone https://github.com/CarloZD/pokedex-react.git
+   ```
+2. Entrar a la carpeta del proyecto:
+
+   ```bash
+   cd pokedex-react
+   ```
+3. Instalar dependencias:
+
+   ```bash
+   npm install
+   ```
+4. Ejecutar el servidor de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+5. Abrir en el navegador la dirección que se muestre (por ejemplo, `http://localhost:5173/`).
+
+## Enlace del video
+
+
+
+## Autor
+
+Desarrollado por Ruiz Llanterhuay Carlos Enrique – Proyecto PokeDex React.
+
+## Posdata
+Kanto region sobrevalorada, Sinnoh es mejor
