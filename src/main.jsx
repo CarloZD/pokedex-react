@@ -6,6 +6,8 @@ import Home from './pages/Home'
 import Items from './pages/Items'
 import Contact from './pages/Contact'
 import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>

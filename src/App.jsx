@@ -1,13 +1,24 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <nav style={{ display: 'flex', gap: '1rem', padding: '1rem', background: '#f2f2f2' }}>
-      <Link to="/">Home</Link>
-      <Link to="/items">Items</Link>
-      <Link to="/contact">Contact</Link>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-danger px-4">
+      <Link className="navbar-brand fw-bold" to="/">PokeDex</Link>
+      <div className="collapse navbar-collapse show">
+        <ul className="navbar-nav me-auto">
+          <li className="nav-item">
+            <Link className="nav-link" to="/">Inicio</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/items">Pokémon</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/contact">Contacto</Link>
+          </li>
+        </ul>
+      </div>
     </nav>
-  )
+  );
 }
 
-export default App
+export default App;
